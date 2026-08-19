@@ -2,14 +2,24 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const router = express.Router();
 
-router.get('/', (req, res) => {
+console.log('__dirname:', __dirname);
+
+const caminhoCSS = path.join(__dirname, 'src', 'styles', 'login.css');
+
+console.log('Caminho do CSS:', caminhoCSS);
+
+app.get('/teste-css', (req, res) => {
+    res.sendFile(caminhoCSS);
+});
+
+app.use( express.static(path.join(__dirname, 'src')));
+
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.use(router);
-
 app.listen(3000, () => {
-    console.log('Server rodando na porta 3000');
+    console.log('Servidor rodando na porta 3000');
 });
+console.log('ESTA E A VERSAO NOVA DO SERVER');
