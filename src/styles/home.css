@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabeçalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 90px;
+    gap: 30vh;   
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 20vh;
+}
+
+.menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #f20606;
+}
+
+li {
+    font-size: 20px;
+}

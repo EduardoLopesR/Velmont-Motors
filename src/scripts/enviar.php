@@ -2,6 +2,7 @@
 require_once __DIR__ . '/../../phpmailer/src/PHPMailer.php';
 require_once __DIR__ . '/../../phpmailer/src/SMTP.php';
 require_once __DIR__ . '/../../phpmailer/src/Exception.php';
+require_once __DIR__ . '/../../.env';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -15,7 +16,7 @@ try {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'dudukakaroto4@gmail.com';
-    $mail->Password = 'nbch qiea puxv ytww'; 
+    $mail->Password = '';
     $mail->Port = 587;
 
     $mail->setFrom('dudukakaroto4@gmail.com');
@@ -28,7 +29,6 @@ try {
 
     if($mail->send()) {
         echo 'Email enviado com sucesso!';
-
     } else {
         echo 'Erro ao enviar o email: ' . $mail->ErrorInfo;
     }
