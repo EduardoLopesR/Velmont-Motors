@@ -87,8 +87,22 @@ li {
     gap: 3vh;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+.carousel-caption-letf {
+    position: absolute !important;
+    top: 20% !important;
+    right: auto !important;
+    left: 25% !important;
+    bottom: auto !important;
+    transform: translateY(-100%) !important;
+    width: 50% !important;
+    background: rgba(255, 255, 255, 0.916) !important;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 3vh;
+    
+}
 .carousel-item img {
-  width: 70% !important;
+  width: 100%;
   height: auto ;
   margin: 0 auto;
   display: block;
@@ -110,11 +124,15 @@ p {
 }
 h2 {
     color: #000000 !important;
+    text-align: center !important;
+    font-size: 3.0rem !important;
+
 }
 h1 {
     text-align: center;
+    text-transform: uppercase;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 0px !important;
 }
 
 .card {
